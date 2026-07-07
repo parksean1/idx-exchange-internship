@@ -23,16 +23,16 @@ The goal was to transform raw real estate transaction data into actionable insig
 
 ### Data Preparation
 
-- Cleaned and validated **500K+ MLS records**
+- Cleaned and validated over **500,000 MLS housing records**
 - Standardized date formats and handled missing values
 - Removed invalid and inconsistent entries
-- Prepared analysis-ready datasets for downstream visualization
+- Prepared analysis-ready datasets for visualization and modeling
 
 ### Feature Engineering
 
 Created key real estate metrics including:
 
-- Price Ratio (Close Price / Original List Price)
+- Close Price / Original List Price Ratio
 - Price per Square Foot
 - Listing-to-Contract Days
 - Contract-to-Close Days
@@ -41,31 +41,44 @@ Created key real estate metrics including:
 ### Data Quality & Outlier Handling
 
 - Applied IQR-based outlier detection
-- Flagged extreme values in pricing, square footage, and timing metrics
+- Identified and removed extreme values in pricing, square footage, and timing metrics
 - Built filtered datasets for more reliable statistical analysis and visualization
 
 ---
 
 # Tableau Dashboards
 
-Developed four interactive Tableau dashboards to explore California housing market trends from multiple perspectives.
+Developed four interactive Tableau dashboards to analyze California housing market trends from multiple perspectives.
 
-## 1. Housing Market Trends Dashboard
+## 1. House Market Insights
+
+Features:
+
+- Price vs. Sales by ZIP Code
+- Home Price Distribution
+- Top ZIP Codes by Homes Sold
+- Relationships between pricing and housing demand
+
+![House Market Insights](tableau_images/House%20Market%20Insights.png)
+
+---
+
+## 2. Market Analysis
 
 Features:
 
 - Median home price trends (2024–2026)
 - Average days on market
-- Average Close-to-Original List Price Ratio
+- Close-to-original list price ratio
 - New listings
 - Closed sales
 - Interactive filters by county, city, ZIP code, and property subtype
 
-![Housing Market Trends](tableau_images/housing_market_trends.png)
+![Market Analysis](tableau_images/Market%20Analysis.png)
 
 ---
 
-## 2. Market Conditions & Pressure Dashboard
+## 3. Market Conditions & Pressure Analysis
 
 Features:
 
@@ -74,33 +87,20 @@ Features:
 - Average days on market
 - Interactive filtering by location and property subtype
 
-![Market Conditions & Pressure](tableau_images/market_conditions_pressure.png)
+![Market Conditions & Pressure Analysis](tableau_images/Market%20Conditions%20%26%20Pressure%20Analysis.png)
 
 ---
 
-## 3. California Housing Market Insights Dashboard
-
-Features:
-
-- Price vs. sales by ZIP code scatterplot
-- Home price distribution histogram
-- Top ZIP codes by homes sold
-- Market demand and pricing relationship analysis
-
-![California Housing Market Insights](tableau_images/california_housing_insights.png)
-
----
-
-## 4. Real Estate Market Analysis Dashboard
+## 4. Real Estate Market Analysis
 
 Features:
 
 - Median home prices by ZIP code map
 - Homes sold heat map
-- Top listing agents by sales volume and transactions
-- Top listing offices by sales volume and transactions
+- Top listing agents by sales volume and transaction count
+- Top listing offices by sales volume and transaction count
 
-![Real Estate Market Analysis](tableau_images/real_estate_market_analysis.png)
+![Real Estate Market Analysis](tableau_images/Real%20Estate%20Market%20Analysis.png)
 
 ---
 
@@ -127,36 +127,6 @@ Features:
 
 ---
 
-## Project Structure
-
-```
-Week1/
-├── Initial exploratory data analysis
-
-Week2-3/
-├── Mortgage rate integration
-├── Data merging
-
-Week4-5/
-├── Data cleaning
-├── Data preparation
-
-Week6/
-├── Feature engineering
-
-Week7/
-├── Outlier detection
-├── Data quality analysis
-
-tableau_images/
-├── housing_market_trends.png
-├── market_conditions_pressure.png
-├── california_housing_insights.png
-└── real_estate_market_analysis.png
-```
-
----
-
 ## Repository Notes
 
-The original MLS dataset and Tableau workbook are **not included** in this repository due to data confidentiality requirements. Dashboard screenshots are provided to showcase the final visualizations while protecting proprietary data.
+The original MLS dataset, CSV files, and Tableau workbook are **not included** in this repository due to data confidentiality requirements from the internship. Dashboard screenshots are provided to showcase the final visualizations while protecting proprietary data.
